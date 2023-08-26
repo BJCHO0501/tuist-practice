@@ -1,7 +1,3 @@
 import ProjectDescription
 
-let config = Config(
-    plugins: [
-        .local(path: .relativeToManifest("../../Plugins/TuistPractice")),
-    ]
-)
+let config = Config()
