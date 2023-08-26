@@ -36,7 +36,7 @@ extension Project {
         )
 
         let targets = [appTargat]
-        let schemes: [Scheme] = [.makeScheme(name: name, configurationName: .debug)]
+        let schemes: [Scheme] = [.makeScheme(name: name, configurationName: .release)]
 
         return .init(
             name: name,
@@ -57,7 +57,7 @@ extension Scheme {
         return Scheme(
             name: name,
             shared: true,
-            buildAction: .buildAction(targets: ["\(name)(\(configurationName.rawValue)"]),
+            buildAction: .buildAction(targets: ["\(name)"]),
             runAction: .runAction(configuration: configurationName),
             archiveAction: .archiveAction(configuration: configurationName),
             profileAction: .profileAction(configuration: configurationName),
