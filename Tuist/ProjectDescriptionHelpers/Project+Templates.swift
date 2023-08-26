@@ -3,13 +3,13 @@ import ProjectDescription
 extension Project {
     public static func makeModul(
         name: String,
-        orgainzationName: String,
-        platform: Platform = .iOS,
+        orgainzationName: String = "TuistPractice",
+        platform: Platform,
         deploymentTarget: DeploymentTarget = .iOS(targetVersion: "16.0", devices: [.iphone, .ipad]),
         product: Product,
         pakages: [Package] = [],
         sources: SourceFilesList = ["Sources/**"],
-        resources: ResourceFileElements = ["Resources/**"],
+        resources: ResourceFileElements = [],
         dependencies: [TargetDependency] = [],
         infoPlist: InfoPlist = .default
     ) -> Project {
